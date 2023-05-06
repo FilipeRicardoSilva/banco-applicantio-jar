@@ -1,2 +1,0 @@
-# banco-applicantio-jar
-java_executavel_com_conexao_com_mysql_container_docker
