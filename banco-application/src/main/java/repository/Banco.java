@@ -37,17 +37,13 @@ public class Banco {
         con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2021);");
         con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2022);");
 
-        con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2023);");
-        con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2024);");
         System.out.println("INSERT REALIZADO");
 
         /* MYSQL */
         System.out.println("EXECUTANDO INSERTS EM LOCAL");
-        conLocal.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2021);");
-        conLocal.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2022);");
 
-        conLocal.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2023);");
-        conLocal.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2024);");
+        conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE1');");
+        conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE2');");
         System.out.println("INSERT REALIZADO");
 
         // con.update("UPDATE testeContainer SET nome = ?, ano_lançamento= ? WHERE id = ?", "", , );

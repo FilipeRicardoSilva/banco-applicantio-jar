@@ -16,15 +16,17 @@ public class ConexaoLocal {
     private JdbcTemplate conexaoDoBanco;
 
     public ConexaoLocal() {
+        
+
 
         /* MYSLQ WORKBENCH = LOCAL */
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         // PROCURAR CLASS NAME DO MYSQL WORKBENTH OU MYSQL
-        dataSource.setUrl("jdbc:mysql://localhost:3307/renderwatch?serverTimezone=America/Sao_Paulo");
+        dataSource.setUrl("jdbc:mysql://0.0.0.0:3307/renderWatch?autoReconnect=true&useSSL=false");
         //COLOCAR URL DA AZURE OU BANCO LOCAL / para conectar em banco local, utilizar localhost e porta
         dataSource.setUsername("root");
-        dataSource.setPassword("#Grupo6");
+        dataSource.setPassword("#Gfgrupo6");
 
         this.conexaoDoBanco = new JdbcTemplate(dataSource);
 
