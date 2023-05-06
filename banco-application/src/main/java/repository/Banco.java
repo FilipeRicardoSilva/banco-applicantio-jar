@@ -32,6 +32,7 @@ public class Banco {
                 + "  nome VARCHAR(45) ,\n"
                 + "  inteiro INT\n"
                 + ");");*/
+        
  /* SQL  */
         System.out.println("EXECUTANDO INSERTS EM AZURE");
         con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2021);");
