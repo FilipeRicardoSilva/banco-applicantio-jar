@@ -22,7 +22,7 @@ public class Banco {
         ConexaoLocal conexaoLocal = new ConexaoLocal();
         Conexao conexao = new Conexao();
 
-        JdbcTemplate conLocal = conexaoLocal.getConexaoDoBanco();
+        JdbcTemplate conLocal = new JdbcTemplate(ConexaoLocal.dataSource());
         JdbcTemplate con = conexao.getConexaoDoBanco();
 
         /*
@@ -41,7 +41,8 @@ public class Banco {
         System.out.println("INSERT REALIZADO");
 
         /* MYSQL */
-        System.out.println("EXECUTANDO INSERTS EM LOCAL");
+        
+      System.out.println("EXECUTANDO INSERTS EM LOCAL");
 
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE1');");
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE2');");
