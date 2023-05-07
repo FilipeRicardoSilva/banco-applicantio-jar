@@ -32,7 +32,6 @@ public class Banco {
                 + "  nome VARCHAR(45) ,\n"
                 + "  inteiro INT\n"
                 + ");");*/
-        
  /* SQL  */
         System.out.println("EXECUTANDO INSERTS EM AZURE");
         con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2021);");
@@ -41,8 +40,13 @@ public class Banco {
         System.out.println("INSERT REALIZADO");
 
         /* MYSQL */
-        
-      System.out.println("EXECUTANDO INSERTS EM LOCAL");
+        System.out.println("EXECUTANDO INSERTS EM LOCAL");
+        conLocal.update(("""
+                         CREATE TABLE testeContainer  (
+                             id INT PRIMARY KEY AUTO_INCREMENT,
+                           nome VARCHAR(45),
+                           inteiro INT
+                         );"""));
 
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE1');");
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE2');");

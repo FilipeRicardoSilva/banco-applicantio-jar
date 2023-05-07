@@ -23,8 +23,8 @@ import javax.sql.DataSource;
      public static DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3307/renderWatch?autoReconnect=true&useSSL=false&serverTimezone=UTC");
-        dataSource.setUsername("root");
+        dataSource.setUrl("jdbc:mysql://172.17.0.1:3307/renderWatch?useSSL=false&serverTimezone=UTC");
+        dataSource.setUsername("filipe");
         dataSource.setPassword("Gfgrupo6");
         return dataSource;
     }
