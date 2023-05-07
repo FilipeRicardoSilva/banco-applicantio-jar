@@ -29,7 +29,7 @@ public class ConexaoLocal {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         // PROCURAR CLASS NAME DO MYSQL WORKBENTH OU MYSQL
-        dataSource.setUrl("jdbc:mysql://mydatabase:3307/renderWatch");
+        dataSource.setUrl("jdbc:mysql://172.17.0.2:3307/renderWatch");
         //COLOCAR URL DA AZURE OU BANCO LOCAL / para conectar em banco local, utilizar localhost e porta
         dataSource.setUsername("root");
         dataSource.setPassword("#Gfgrupo6");
@@ -46,3 +46,42 @@ public class ConexaoLocal {
      
 
 }
+
+/*
+String url = "jdbc:mysql://172.17.0.2:3306/renderWatch";
+import java.sql.;
+
+public class JdbcExample {
+    public static void main(String[] args) {
+        try {
+            // Carrega o driver JDBC para o banco de dados
+            Class.forName("com.mysql.jdbc.Driver");
+
+            // Conecta ao banco de dados
+            String url = "jdbc:mysql://localhost:3306/banco_de_dados";
+            String user = "usuario";
+            String password = "senha";
+            Connection conn = DriverManager.getConnection(url, user, password);
+
+            // Executa uma consulta SQL
+            String sql = "SELECT FROM tabela";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+
+            // Processa os resultados da consulta
+            while (rs.next()) {
+                String coluna1 = rs.getString("coluna1");
+                int coluna2 = rs.getInt("coluna2");
+                System.out.println(coluna1 + ", " + coluna2);
+            }
+
+            // Fecha os recursos
+            rs.close();
+            stmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+*/
