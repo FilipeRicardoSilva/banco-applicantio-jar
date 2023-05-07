@@ -29,7 +29,7 @@ public class ConexaoLocal {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         // PROCURAR CLASS NAME DO MYSQL WORKBENTH OU MYSQL
-        dataSource.setUrl("jdbc:mysql://172.17.0.2:3307/renderWatch");
+        dataSource.setUrl("jdbc:mysql://172.31.28.45:3307/renderWatch?autoReconnect=true&useSSL=false&serverTimezone=UTC");
         //COLOCAR URL DA AZURE OU BANCO LOCAL / para conectar em banco local, utilizar localhost e porta
         dataSource.setUsername("root");
         dataSource.setPassword("#Gfgrupo6");

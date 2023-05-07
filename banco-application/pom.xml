@@ -79,6 +79,8 @@
             <!-- ou versão que já existir na .m2 local -->
         </dependency>
         
+        
+        
         <!-- Driver do servidor de banco H2 -->
         <dependency>
             <groupId>com.h2database</groupId>
