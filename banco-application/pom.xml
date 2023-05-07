@@ -67,7 +67,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.22</version>
+            <version>8.0.28</version>
             <!-- ou versão que já existir na .m2 local -->
         </dependency>
         <!-- SQL Server -->
@@ -78,7 +78,8 @@
             <!-- ou versão 7.2.2.jre11, se sua JDK for a 11 -->
             <!-- ou versão que já existir na .m2 local -->
         </dependency>
-        
+
+
         
         
         <!-- Driver do servidor de banco H2 -->
