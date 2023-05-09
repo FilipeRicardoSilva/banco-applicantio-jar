@@ -17,20 +17,30 @@ package database;
 //import java.sql.Statement;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
-    public class ConexaoLocal { 
-    
-    
-     public static DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.jdbc.core.JdbcTemplate;
+ public class ConexaoLocal {
+
+    private JdbcTemplate conexaoDoBanco;
+
+    public ConexaoLocal() {
+
+        BasicDataSource dataSource = new BasicDataSource();
+        this.conexaoDoBanco = new JdbcTemplate(dataSource);
+
+        /* SLQ SERVER NUVEM = AZURE */
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://172.17.0.1:3307/renderWatch?useSSL=false&serverTimezone=UTC");
-        dataSource.setUsername("filipe");
-        dataSource.setPassword("Gfgrupo6");
-        return dataSource;
+        dataSource.setUrl("jdbc:mysql://localhost:3306/banco01");
+        dataSource.setUsername("root");
+        dataSource.setPassword("urubu100");
+        
+        this.conexaoDoBanco = new JdbcTemplate(dataSource);
+
     }
 
-   
-     
+    public JdbcTemplate getConexaoBanco() {
+        return conexaoDoBanco;
+    }
 
 }
 
