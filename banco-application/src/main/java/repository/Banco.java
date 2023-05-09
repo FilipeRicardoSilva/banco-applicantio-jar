@@ -46,6 +46,7 @@ public class Banco {
 
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE1');");
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE2');");
+        
         System.out.println("INSERT REALIZADO");
 
         // con.update("UPDATE testeContainer SET nome = ?, ano_lançamento= ? WHERE id = ?", "", , );
