@@ -22,7 +22,7 @@ public class Banco {
         ConexaoLocal conexaoLocal = new ConexaoLocal();
         Conexao conexao = new Conexao();
 
-        JdbcTemplate conLocal = conexaoLocal.getConexaoBanco();
+        JdbcTemplate conLocal = conexaoLocal.getConexaoDoBanco();
         JdbcTemplate con = conexao.getConexaoDoBanco();
 
         /*
@@ -34,6 +34,8 @@ public class Banco {
                 + ");");*/
  /* SQL  */
         System.out.println("EXECUTANDO INSERTS EM AZURE");
+        
+        
         con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2021);");
         con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2022);");
 
@@ -41,12 +43,6 @@ public class Banco {
 
         /* MYSQL */
         System.out.println("EXECUTANDO INSERTS EM LOCAL");
-        conLocal.update(("""
-                         CREATE TABLE testeContainer  (
-                             id INT PRIMARY KEY AUTO_INCREMENT,
-                           nome VARCHAR(45),
-                           inteiro INT
-                         );"""));
 
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE1');");
         conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE2');");

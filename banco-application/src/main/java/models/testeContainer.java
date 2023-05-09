@@ -4,6 +4,9 @@
  */
 package models;
 
+import database.ConexaoLocal;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 /**
  *
  * @author asusn
@@ -42,6 +45,9 @@ public class testeContainer {
     public String toString() {
         return "testeContainer{" + "id=" + id + ", nome=" + nome + ", inteiro=" + inteiro + '}';
     }
+    
+    
+  
 
 
 
