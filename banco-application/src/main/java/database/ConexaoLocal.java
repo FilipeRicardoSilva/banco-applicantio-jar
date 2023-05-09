@@ -30,7 +30,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
         /* SLQ SERVER NUVEM = AZURE */
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/Sollicitus?useTimezone=true&serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/banco01?useTimezone=true&serverTimezone=UTC");
         dataSource.setUsername("root");
         dataSource.setPassword("urubu100");
         
