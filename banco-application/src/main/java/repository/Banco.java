@@ -22,7 +22,7 @@ public class Banco {
         ConexaoLocal conexaoLocal = new ConexaoLocal();
         Conexao conexao = new Conexao();
 
-        JdbcTemplate conLocal = conexaoLocal.getConexaoDoBanco();
+        JdbcTemplate conLocal = conexaoLocal.getConexaoBanco();
         JdbcTemplate con = conexao.getConexaoDoBanco();
 
         /*
