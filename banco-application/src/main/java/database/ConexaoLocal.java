@@ -30,7 +30,7 @@ public class ConexaoLocal {
 
         /* SLQ SERVER NUVEM = AZURE */
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql:/localhost/renderwatch");
+        dataSource.setUrl("jdbc:mysql:/localhost:8080/renderwatch");
         dataSource.setUsername("root");
         dataSource.setPassword("urubu100");
         
