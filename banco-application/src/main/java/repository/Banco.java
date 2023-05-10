@@ -4,7 +4,7 @@
  */
 package repository;
 
-import database.Conexao;
+//import database.Conexao;
 import database.ConexaoLocal;
 import java.util.List;
 import models.testeContainer;
@@ -20,10 +20,10 @@ public class Banco {
     public static void main(String[] args) {
 
         ConexaoLocal conexaoLocal = new ConexaoLocal();
-        Conexao conexao = new Conexao();
+        //Conexao conexao = new Conexao();
 
         JdbcTemplate conLocal = conexaoLocal.getConexaoBanco();
-        JdbcTemplate con = conexao.getConexaoDoBanco();
+        //JdbcTemplate con = conexao.getConexaoDoBanco();
 
         /*
         // ESTE PASSO NÃO É NECEESARIO QUANDO AS TABELAS JA ESTÃO CRIADAS
@@ -33,7 +33,7 @@ public class Banco {
                 + "  inteiro INT\n"
                 + ");");*/
  /* SQL  */
-        System.out.println("EXECUTANDO INSERTS EM AZURE");
+      /*  System.out.println("EXECUTANDO INSERTS EM AZURE");
         
         
         con.update("INSERT INTO testeContainer (nome,inteiro) VALUES( 'TESTE', 2021);");
@@ -48,10 +48,6 @@ public class Banco {
         conLocal.update("INSERT INTO testeContainer (nome, inteiro) VALUES( 'TESTE2', 2022);");
         
         System.out.println("INSERT REALIZADO");
-
-        // con.update("UPDATE testeContainer SET nome = ?, ano_lançamento= ? WHERE id = ?", "", , );
-        List<testeContainer> testeContainerItens = con.query("SELECT*FROM testeContainer;", new BeanPropertyRowMapper<>(testeContainer.class));
-        System.out.println(testeContainerItens);
     }
 
 }

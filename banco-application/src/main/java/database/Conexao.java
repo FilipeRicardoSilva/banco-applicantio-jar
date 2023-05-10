@@ -8,6 +8,8 @@ package database;
  *
  * @author Filipe
  */
+
+/*
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -21,6 +23,7 @@ public class Conexao {
         this.conexaoDoBanco = new JdbcTemplate(dataSource);
 
         /* SLQ SERVER NUVEM = AZURE */
+/*
         dataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         dataSource.setUrl("jdbc:sqlserver://svr-grupo6.database.windows.net:1433;"
                 + "database=render_watch;user=adm-render-watch@svr-grupo6;password={#Gfgrupo6};"
@@ -35,3 +38,5 @@ public class Conexao {
     }
 
 }
+
+*/

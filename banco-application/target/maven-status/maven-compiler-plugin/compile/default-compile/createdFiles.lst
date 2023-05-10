@@ -1,4 +1,3 @@
 repository\Banco.class
-database\Conexao.class
 database\ConexaoLocal.class
 models\testeContainer.class
