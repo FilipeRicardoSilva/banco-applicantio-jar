@@ -44,8 +44,8 @@ public class Banco {
         /* MYSQL */
         System.out.println("EXECUTANDO INSERTS EM LOCAL");
 
-        conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE1');");
-        conLocal.update("INSERT INTO testeContainer (nome) VALUES( 'TESTE2');");
+        conLocal.update("INSERT INTO testeContainer (nome, inteiro) VALUES( 'TESTE1', 2021);");
+        conLocal.update("INSERT INTO testeContainer (nome, inteiro) VALUES( 'TESTE2', 2022);");
         
         System.out.println("INSERT REALIZADO");
 
